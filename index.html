@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<title>Pyodide IDE</title>
+	</head>
+	<body>
+		<div id="top"></div>
+		<div id="toolbar">
+			<button id="run" disabled>RUN</button>
+			<button id="reset" disabled>RESET</button>
+		</div>
+		<div id="editor-container">
+			<div id="editor"></div>
+			<div id="mid"></div>
+		</div>
+		<pre id="terminal">Python 3 is loading...</pre>
+
+		<!-- SCRIPTS -->
+		<script src="python.js"></script>
+		<script src="script.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min/ace.js"></script>
+		<script>
+			var editor = ace.edit('editor')
+			editor.setTheme('ace/theme/monokai')
+			editor.session.setMode('ace/mode/python')
+			document.onmouseup = () => {
+				editor.resize()
+			}
+		</script>
+	</body>
+</html>

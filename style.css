@@ -1,0 +1,103 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+#top {
+	height: 5px;
+	background-image: linear-gradient(#FFFF00, #AAAA00);
+	border-bottom: 1px solid black;
+}
+
+#toolbar {
+	text-align: center;
+	border-bottom: 1px solid black;
+	background-image: linear-gradient(#EEEEEE, #AAAAAA)
+}
+
+#toolbar button {
+	border: none;
+	margin: 0 2px;
+	padding: 5px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	color: white;
+	text-shadow: 1px 1px 0px black;
+	font-family: 'VT323', monospace;
+	font-size: 17px;
+	outline: none;
+}
+
+#toolbar button:hover {
+	cursor: pointer;
+}
+
+#run {
+	background-image: linear-gradient(#00DD00, #005500);
+}
+
+#run:hover {
+	background-image: linear-gradient(#00FF00, #007700);
+}
+
+#run:active {
+	background-image: linear-gradient(#007700, #00FF00);
+}
+
+#reset {
+	background-image: linear-gradient(#DDDD00, #555500);
+}
+
+#reset:hover {
+	background-image: linear-gradient(#FFFF00, #777700);
+}
+
+#reset:active {
+	background-image: linear-gradient(#777700, #FFFF00);
+}
+
+#toolbar button:disabled {
+	background-image: linear-gradient(#DDDDDD, #555555);
+}
+
+#toolbar button:hover:disabled {
+	background-image: linear-gradient(#FFFFFF, #777777);
+}
+
+#editor-container {
+	overflow: hidden;
+	resize: vertical;
+	height: 40%;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+}
+
+#editor {
+	flex: 1;
+	border-bottom: 1px solid black;
+}
+
+#mid {
+	height: 10px;
+	background-image: linear-gradient(#FFFFFF, #AAAAAA);
+}
+
+#terminal {
+	flex: 1;
+	overflow: auto;
+	padding: 10px;
+	margin: 0;
+	border-top: 1px solid black;
+	color: white;
+	font-family: 'VT323', monospace;
+	font-size: 17px;
+	text-shadow: 1px 1px 0px black;
+	background-image: linear-gradient(#000055, #000033);
+}
